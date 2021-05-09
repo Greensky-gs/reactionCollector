@@ -6,7 +6,7 @@ const sendMsg = async() => {
     const botMessage = await /* don't forgot the async parameter*/ message.channel.send(new MessageEmbed()
         .setTitle("You'r parameters")
     ).then(async(m) => {
-        listEmoji.forEach(react => {
+        listEmoji.forEach(async(react) => {
             await m.react(react)
         })
     })
